@@ -1,5 +1,5 @@
 import { Fragment, useState } from "react";
-
+import classes from './APIExamples.module.css';
 const APIExamples = () => {
 
     const [movies, setMovies] = useState([]);
@@ -39,7 +39,7 @@ const APIExamples = () => {
     // }
 
     // post request 
-    
+
     // async function addMovieHandler(movie) {
     //     const response = await fetch('https://react-http-6b4a6.firebaseio.com/movies.json', {
     //       method: 'POST',
@@ -67,9 +67,9 @@ const APIExamples = () => {
     //   }
 
     return (
-        <Fragment>
+        <div className={classes.main}>
             <button onClick={fetchMoviesHandler}>Fetch movies</button>
-        </Fragment>
+        </div>
     )
 }
 

@@ -5,13 +5,15 @@ import Meals from './components/Meals/Meals';
 import CartProvider from './store/CartProvider';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import APIExamples from './components/APIExamples/APIExamples';
+import SimpleInput from './components/Forms/SimpleInput';
 
-const router = createBrowserRouter([
-  {
-    path: '/', element: <Header />
-  },
-  { path: '/apiexamples', element: <APIExamples />}
-])
+// const router = createBrowserRouter([
+//   {
+//     path: '/', element: <Header />
+//   },
+//   { path: '/apiexamples', element: <APIExamples />},
+//   { path: '/forms', element: <SimpleInput />}
+// ])
 
 
 function App() {
@@ -26,7 +28,7 @@ function App() {
   }
 
   return (
-    <RouterProvider router={router}>
+    // <RouterProvider router={router}>
       <CartProvider>
         {cartIsShown && <Cart onClose={hideCartHandler} />}
         <Header onShowCart={showCartHandler} />
@@ -34,7 +36,7 @@ function App() {
           <Meals />
         </main>
       </CartProvider>
-    </RouterProvider>
+    // </RouterProvider>
   );
 }
 
